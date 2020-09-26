@@ -101,3 +101,43 @@ form button, form input {
     transform: translateY(7rem) rotateZ(30deg);
     opacity: 0;
 }
+
+.todo-filter {
+    margin: 1rem;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    /*removing original styles*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    /*adding new styles*/
+    width: 9rem;
+    cursor: pointer;
+    padding: 1rem;
+    color: #003b46;
+}
+
+.todo-filter::after {
+    content: '\25BC';
+    color: #003b46;
+    background-color: #c4dfe6;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.todo-filter:hover::after {
+    color: #c4dfe6;
+    background-color: #003b46;
+}
+
+
