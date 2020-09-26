@@ -63,6 +63,7 @@ form button, form input {
     font-size: 1.75rem;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .todo-item{
@@ -84,4 +85,19 @@ form button, form input {
     cursor: pointer;
     font-size: 1rem;
     border-radius: 0;
+}
+
+/*make icons unclickable*/
+.fa-trash-alt, .fa-clipboard-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.erased {
+    transform: translateY(7rem) rotateZ(30deg);
+    opacity: 0;
 }
